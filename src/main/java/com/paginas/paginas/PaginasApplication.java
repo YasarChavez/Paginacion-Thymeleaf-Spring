@@ -1,0 +1,13 @@
+package com.paginas.paginas;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class PaginasApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(PaginasApplication.class, args);
+	}
+
+}
