@@ -24,7 +24,7 @@ public class PersonaController {
 
     @GetMapping("/lista")
     public String listarItems(@PageableDefault(page = 0, size = 5) Pageable pageable, Model model) {
-        Page<Persona> page = personaService.obtenerItemsPaginados(pageable);
+        Page<Persona> page = personaService.paginar(pageable);
         model.addAttribute("page", page);
         model.addAttribute("currentPage", page.getNumber());
         model.addAttribute("pageNumbers", page.getNumber());

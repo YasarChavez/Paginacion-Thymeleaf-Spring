@@ -13,7 +13,7 @@ public class PersonaService {
     @Autowired
     private PersonaRepository personaRepository;
 
-    public Page<Persona> obtenerItemsPaginados(Pageable pageable) {
+    public Page<Persona> paginar(Pageable pageable) {
         return personaRepository.findAll(pageable);
     }
 
