@@ -13,8 +13,10 @@
                 <h3>Personas</h3>
                 <thead>
                     <tr>
+                        <!-- Mostrar la lista de elementos -->
                         <th scope="col">Nombre</th>
                         <th scope="col">Apellido</th>
+                        <!-- Agrega más campos según tus necesidades -->
                     </tr>
                 </thead>
                 <tbody>
@@ -22,7 +24,7 @@
                     <tr th:each="page : ${page.content}">
                         <td th:text="${page.nombre}"></td>
                         <td th:text="${page.apellido}"></td>
-                        <!-- Agrega más campos según tus necesidades -->
+                    <!-- Agrega más campos según tus necesidades -->
                     </tr>
                 </tbody>
             </table>
@@ -40,7 +42,8 @@
 
                 <!-- Paginación -->
                 <nav>
-                    <ul class="pagination">
+                    <!-- justify-content-center/end/start -->
+                    <ul class="pagination justify-content-center">
                         <li class="page-item" th:if="${currentPage > 0}">
                             <a class="page-link" th:href="@{/lista(page=${currentPage - 1}, size=${page.Size})}" aria-label="Previous">
                                 <span aria-hidden="true">&laquo;</span>
