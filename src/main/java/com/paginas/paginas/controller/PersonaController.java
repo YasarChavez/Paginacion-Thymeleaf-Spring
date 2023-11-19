@@ -27,7 +27,6 @@ public class PersonaController {
         Page<Persona> page = personaService.paginar(pageable);
         model.addAttribute("page", page);
         model.addAttribute("currentPage", page.getNumber());
-        model.addAttribute("pageNumbers", page.getNumber());
         model.addAttribute("totalItems", page.getTotalElements());
         model.addAttribute("totalPages", page.getTotalPages());
         return "lista";
